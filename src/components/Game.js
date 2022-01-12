@@ -17,7 +17,13 @@ class Game extends React.Component {
   }
 
   // TODO: create a componentDidMount() which will set the current time
-  
+  componentDidMount(){
+    console.log('Game componentDidMount')
+    const time = current.toLocaleTimeString("en-US");
+
+  console.log(time);
+  }
+
   setCurrentTime = () => {
     this.setState({ time: new Date(Date.now())});
   }
